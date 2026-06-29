@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Surat Masuk</title>
+
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link rel="stylesheet" href="css/surat.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.png" />
+
+        <h2>SIAS</h2>
+
+        <p>KPU Nganjuk</p>
+      </div>
+
+      <ul>
+        <li onclick="location.href = 'dashboard.html'">
+          <i class="fas fa-house"></i>
+          Dashboard
+        </li>
+
+        <li class="active">
+          <i class="fas fa-inbox"></i>
+          Surat Masuk
+        </li>
+
+        <li onclick="location.href = 'surat-keluar.html'">
+          <i class="fas fa-paper-plane"></i>
+          Surat Keluar
+        </li>
+
+        <li onclick="location.href = 'tambah-surat.html'">
+          <i class="fas fa-plus-circle"></i>
+          Tambah Surat
+        </li>
+
+        <li>
+          <i class="fas fa-chart-column"></i>
+          Statistik
+        </li>
+
+        <li onclick="location.href = 'index.html'">
+          <i class="fas fa-right-from-bracket"></i>
+          Logout
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="header-top">
+        <h1>Surat Masuk</h1>
+
+        <button class="btnTambah">
+          <i class="fas fa-plus"></i>
+
+          Tambah Surat
+        </button>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="cari"
+          placeholder="Cari nomor surat, pengirim atau perihal..."
+        />
+      </div>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+
+              <th>Nomor Surat</th>
+
+              <th>Tanggal</th>
+
+              <th>Pengirim</th>
+
+              <th>Perihal</th>
+
+              <th>Aksi</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody">
+            <tr>
+              <td colspan="6">Memuat data...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/surat-masuk.js"></script>
+  </body>
+</html>

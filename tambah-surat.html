@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Surat - SIAS KPU Nganjuk</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/surat.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        .form-box{
+            background:#fff;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,.1);
+        }
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+        .form-group label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:15px;
+            box-sizing:border-box;
+
+        }
+
+        textarea{
+            resize:none;
+        }
+
+        .btnSimpan{
+
+            background:#c62828;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+
+        }
+
+        .btnSimpan:hover{
+
+            background:#a91d1d;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="assets/logo.png">
+
+<h2>SIAS</h2>
+
+<p>KPU Nganjuk</p>
+
+</div>
+
+<ul>
+
+<li onclick="location.href='dashboard.html'">
+
+<i class="fas fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li onclick="location.href='surat-masuk.html'">
+
+<i class="fas fa-inbox"></i>
+
+Surat Masuk
+
+</li>
+
+<li onclick="location.href='surat-keluar.html'">
+
+<i class="fas fa-paper-plane"></i>
+
+Surat Keluar
+
+</li>
+
+<li class="active">
+
+<i class="fas fa-plus-circle"></i>
+
+Tambah Surat
+
+</li>
+
+<li onclick="location.href='statistik.html'">
+
+<i class="fas fa-chart-column"></i>
+
+Statistik
+
+</li>
+
+<li onclick="location.href='index.html'">
+
+<i class="fas fa-right-from-bracket"></i>
+
+Logout
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<h1>Tambah Surat</h1>
+
+<br>
+
+<div class="form-box">
+
+<div class="form-group">
+
+<label>Jenis Surat</label>
+
+<select id="jenis">
+
+<option>Surat Masuk</option>
+
+<option>Surat Keluar</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Nomor Surat</label>
+
+<input
+type="text"
+id="nomor"
+placeholder="Contoh : 001/KPU-NJK/VII/2026">
+
+</div>
+
+<div class="form-group">
+
+<label>Tanggal Surat</label>
+
+<input
+type="date"
+id="tanggal">
+
+</div>
+
+<div class="form-group">
+
+<label>Pengirim / Tujuan</label>
+
+<input
+type="text"
+id="pengirim"
+placeholder="Masukkan Pengirim atau Tujuan">
+
+</div>
+
+<div class="form-group">
+
+<label>Perihal</label>
+
+<input
+type="text"
+id="perihal"
+placeholder="Masukkan Perihal">
+
+</div>
+
+<div class="form-group">
+
+<label>Keterangan</label>
+
+<textarea
+id="keterangan"
+rows="5"
+placeholder="Masukkan Keterangan"></textarea>
+
+</div>
+
+<button
+class="btnSimpan"
+onclick="simpanSurat()">
+
+<i class="fas fa-save"></i>
+
+Simpan Surat
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/config.js"></script>
+
+<script src="js/tambah-surat.js"></script>
+
+</body>
+
+</html>

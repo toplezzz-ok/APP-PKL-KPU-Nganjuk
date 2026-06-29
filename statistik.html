@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Statistik</title>
+
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .statistik {
+        display: flex;
+        gap: 20px;
+        margin-top: 25px;
+      }
+
+      .box {
+        flex: 1;
+
+        background: white;
+
+        padding: 25px;
+
+        border-radius: 12px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        text-align: center;
+      }
+
+      .box h2 {
+        font-size: 50px;
+
+        color: #c62828;
+      }
+
+      .box p {
+        margin-top: 10px;
+      }
+
+      .chart {
+        margin-top: 35px;
+
+        background: white;
+
+        padding: 30px;
+
+        border-radius: 12px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .bar {
+        height: 30px;
+
+        background: #c62828;
+
+        margin: 12px 0;
+
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.png" />
+
+        <h2>SIAS</h2>
+
+        <p>KPU Nganjuk</p>
+      </div>
+
+      <ul>
+        <li onclick="location.href = 'dashboard.html'">
+          <i class="fas fa-house"></i>
+          Dashboard
+        </li>
+
+        <li onclick="location.href = 'surat-masuk.html'">
+          <i class="fas fa-inbox"></i>
+          Surat Masuk
+        </li>
+
+        <li onclick="location.href = 'surat-keluar.html'">
+          <i class="fas fa-paper-plane"></i>
+          Surat Keluar
+        </li>
+
+        <li onclick="location.href = 'tambah-surat.html'">
+          <i class="fas fa-plus-circle"></i>
+          Tambah Surat
+        </li>
+
+        <li class="active">
+          <i class="fas fa-chart-column"></i>
+          Statistik
+        </li>
+
+        <li onclick="location.href = 'index.html'">
+          <i class="fas fa-right-from-bracket"></i>
+          Logout
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Statistik Surat</h1>
+
+      <div class="statistik">
+        <div class="box">
+          <h2>120</h2>
+
+          <p>Surat Masuk</p>
+        </div>
+
+        <div class="box">
+          <h2>85</h2>
+
+          <p>Surat Keluar</p>
+        </div>
+      </div>
+
+      <div class="chart">
+        <h3>Grafik Surat</h3>
+
+        <p>Januari</p>
+
+        <div class="bar" style="width: 70%"></div>
+
+        <p>Februari</p>
+
+        <div class="bar" style="width: 50%"></div>
+
+        <p>Maret</p>
+
+        <div class="bar" style="width: 90%"></div>
+      </div>
+    </div>
+  </body>
+</html>
